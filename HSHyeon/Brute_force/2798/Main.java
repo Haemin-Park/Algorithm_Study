@@ -31,7 +31,7 @@ public class Main {
 	public static void blackjack(int start, int num) {
 		//재귀 사용 카드 세 장 뽑기  
 		if(num == 3) {
-			int sum =0;
+			int sum =0; 
 			
 			for(int i=0; i<3; i++) {
 				sum += picked[i];
