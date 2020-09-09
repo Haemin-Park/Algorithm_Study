@@ -38,4 +38,4 @@ public class  Main
 		Solve(num+1,sum-arr[num],length);
 	}
 	
-}
+} 
