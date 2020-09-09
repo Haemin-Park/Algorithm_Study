@@ -2,7 +2,7 @@ import java.util.Scanner;
 //11401 이항계수3
 
 class  Main 
-{
+{ 
 static int[] arr; 
 
 	public static void main(String[] args) 
