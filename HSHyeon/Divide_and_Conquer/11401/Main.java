@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class  Main 
 {
-static int[] arr;
+static int[] arr; 
 
 	public static void main(String[] args) 
 	{
