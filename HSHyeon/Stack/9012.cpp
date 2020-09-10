@@ -17,19 +17,19 @@ void check(string ps) {
 	stack<char> s;
 	bool vps = true;
 
-	for (int i = 0; i < s.size; i++) {
+	for (int i = 0; i < ps.size; i++) {
 		if (ps[i] == '(')
 			s.push(ps[i]);
 		else if (!s.empty && ps[i] == ')')
 			s.pop();
 		else if (s.empty && ps[i] == ')') {
-			cout << "false";
+			cout << "NO";
 			vps = false;
 			break;
 		}
 	}
-	if (s.empty()&&vps) cout<<"true";
-	else cout<< "false";
+	if (s.empty()&&vps) cout<<"YES";
+	else cout<< "NO";
 }
 int main(){
 	int num;
