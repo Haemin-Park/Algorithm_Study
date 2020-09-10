@@ -68,7 +68,7 @@ int main() {
 		cout << ", " << q.front();
 
 	}
-	cout << ">";
+	cout << ">"; 
 
 	return 0;
 }
