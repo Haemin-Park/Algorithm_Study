@@ -28,7 +28,7 @@ int main()
 				qu.pop();
 
 				cout << tmp;
-				cout << ", ";
+				if (!qu.empty()) cout << ", ";
 			}
 			else {
 				qu.pop();
