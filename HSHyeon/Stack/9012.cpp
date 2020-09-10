@@ -17,13 +17,12 @@ void check(string ps) {
 	stack<char> s;
 	bool vps = true;
 
-	for (int i = 0; i < ps.size; i++) {
+	for (int i = 0; i < ps.size(); i++) {
 		if (ps[i] == '(')
 			s.push(ps[i]);
-		else if (!s.empty && ps[i] == ')')
+		else if ((!s.empty()) && ps[i] == ')')
 			s.pop();
-		else if (s.empty && ps[i] == ')') {
-			cout << "NO";
+		else if (s.empty() && ps[i] == ')') {
 			vps = false;
 			break;
 		}
