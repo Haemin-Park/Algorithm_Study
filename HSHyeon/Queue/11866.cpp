@@ -30,7 +30,7 @@ int main()
 				cout << tmp;
 				if (!qu.empty()) cout << ", ";
 			}
-			else {
+			else { //k번째 숫자가 아니라면 임시 변수 tmp에 저장된 값을 pop한 다음, 다시 push해줘서 큐의 뒤로 보낸다
 				qu.pop();
 				qu.push(tmp);
 			}
