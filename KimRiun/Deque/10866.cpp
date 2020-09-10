@@ -41,7 +41,6 @@ void pop_front() {
 		Count--;
 	}
 	
-	
 }
 
 void pop_back() {
