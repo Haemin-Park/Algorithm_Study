@@ -1,3 +1,5 @@
+// 덱 구현
+// 문제: https://www.acmicpc.net/problem/10866
 #include <iostream>
 #include <string>
 using namespace std;
@@ -9,6 +11,12 @@ int Count;
 int head;
 int tail = 1;
 
+
+/* head는 항상 첫번째 원소 인덱스의 바로 앞 인덱스를 가리킨다.
+   tail은 항상 마지막 원소 인덱스의 바로 다음 인덱스 가리킨다.
+*/
+
+// head에 x넣고 다시 head를 한칸 앞으로 보냄 
 void push_front(int x) {
 	
 	if (head < 0) {
@@ -20,6 +28,7 @@ void push_front(int x) {
 
 }
 
+// tail에 x넣고 다시 tail을 한칸 뒤로 보냄
 void push_back(int x) {
 	if (tail > MAX-1) {
 		tail = 0;
@@ -29,6 +38,7 @@ void push_back(int x) {
 	Count++;
 }
 
+// head를 뒤로 한칸 보내 첫번째 원소를 출력
 void pop_front() {
 	if (Count == 0) cout << "-1" << endl;
 	else {
@@ -43,6 +53,7 @@ void pop_front() {
 	
 }
 
+// tail를 앞으로 한칸 보내 마지막 원소를 출력
 void pop_back() {
 	if (Count == 0) cout << "-1" << endl;
 	else {
@@ -61,11 +72,13 @@ void size() {
 	cout<< Count <<endl;
 }
 
+// 비었으면 1, 원소가 있으면 0 출력
 void empty() {
 	if (Count == 0) cout << "1" << endl;
 	else cout << "0" << endl;
 }
 
+// 첫번째 원소 출력
 void front() {
 	if (Count == 0) cout << "-1" << endl;
 	else {
@@ -79,6 +92,7 @@ void front() {
 	}
 }
 
+//마지막 원소 출력
 void back() {
 	if (Count == 0) cout << "-1" << endl;
 	else {
@@ -94,6 +108,7 @@ void back() {
 
 }
 
+// 모든 원소 출력(문제에는 없는 함수...)
 void printArr() {
 	cout << "**arr출력**" << endl;
 	if (Count == 0) cout << "수행 후 size = 0" << endl;
@@ -111,11 +126,10 @@ void printArr() {
 	}
 }
 
-int main() {
-	int n;
-	cin >> n;
 
-		
+int main() {
+	int n; // 명령 개수
+	cin >> n;
 
 
 	for (int i = 0; i < n; i++) {
