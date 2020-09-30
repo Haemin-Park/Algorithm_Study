@@ -8,7 +8,7 @@ using namespace std;
 
 vector<vector<int> > v;
 int parent[MAX];
-int check[MAX];
+bool check[MAX];
 int N;
 
 void tree(int x) {//트리만드는함수
