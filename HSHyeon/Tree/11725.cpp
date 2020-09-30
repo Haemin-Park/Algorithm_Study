@@ -13,7 +13,7 @@ int parent[MAX];
 int check[MAX];
 int N; 
 
-void tree(int x) {//트리만드는함수
+void tree(int x) {
     //parent 구분
     check[x] = true; //1부터 시작 true
 
