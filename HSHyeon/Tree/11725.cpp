@@ -43,7 +43,6 @@ int main()
         v[x].push_back(y); //양쪽 노드
        
     }
-  //  cout << v[4][1];
     tree(1); //부모찾기
     //cout << "dk";
     printp();
