@@ -5,15 +5,14 @@
 #include<algorithm>
 using namespace std;
 
-
-typedef struct NODE {
+/*typedef struct NODE {
     int num, ed;
     NODE *right;
     NODE *left;
 }node;
+*/
 
 vector<int> pre;
-//int tree[10000];
 
 void inputpre() {
     int temp;
