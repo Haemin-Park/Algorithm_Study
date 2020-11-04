@@ -9,34 +9,36 @@ using namespace std;
 vector<int> heap;
 
 void insertheap(int num) {
-    heap.push_back(num);
-    int idx = heap.size() - 1;
-    while (idx > 0 && heap[(idx - 1) / 2] < heap[idx]) {
-        swap(heap[idx], heap[(idx - 1) / 2]);
-        idx = (idx - 1) / 2;
+    heap.push_back(num); //리프 노드에 변수 삽입
+    int idx = heap.size() - 1; //리프 노드 위치
+    while (idx > 0 && heap[(idx - 1) / 2] < heap[idx]) { //삽입한 값이 부모노드보다 크면
+        swap(heap[idx], heap[(idx - 1) / 2]); 
+        idx = (idx - 1) / 2; //부모와 노드 위치 스왑
 
     }
 }
 void deleteheap() {
-    printf("%d\n", heap[0]);
-    heap[0] = heap.back();
-    heap.pop_back();
+    printf("%d\n", heap[0]); //삭제되기 전 값 출력
+    heap[0] = heap.back(); //루트값에 리프 노드 삽입
+    heap.pop_back(); //리프 노드 제거
+    
     int here = 0;
     while (true) {
         int left = here * 2 + 1, right = here * 2 + 2;
-        if (left >= heap.size()) break;
+        if (left >= heap.size()) break; //리프에 도달할 경우 break
+        
         int next = here;
-        if (heap[next] < heap[left]) next = left;
-        if (right < heap.size() && heap[next] < heap[right])
-            next = right;
-        if (next == here) break;
-        swap(heap[here], heap[next]);
+        if (heap[next] < heap[left]) next = left; //left가 더 크면 자식으로 내려감
+        if (right < heap.size() && heap[next] < heap[right]) //right가 더 클 경우
+            next = right; 
+        if (next == here) break;//바뀌지 않고 그대로일 경우 break
+        swap(heap[here], heap[next]); //위치 스왑
         here = next;
     }
 }
 int main()
 {
-    int a;
+    int a; //입력 개수
     cin >> a;
     for (int i = 0; i < a; i++) {
         int b;
