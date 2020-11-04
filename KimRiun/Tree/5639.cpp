@@ -44,7 +44,7 @@ int main() {
 
     } while (getc(stdin) == ' ');
 
-    cout << "Size: " << Size << endl;
+   // cout << "Size: " << Size << endl;
    // for (int i = 0; i < Size; i++) {
    //     cout << arr[i] << endl;
 
