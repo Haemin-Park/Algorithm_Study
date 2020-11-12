@@ -30,8 +30,9 @@ static int[] arr;
 	}
 
 	public static int Solve(){
-		fac(N)//nCr=nCk+n-1Cr
+		fac(N);//nCr=nCk+n-1Cr
 
 	}	
 }
 
+ 
