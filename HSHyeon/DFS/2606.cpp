@@ -3,17 +3,19 @@
 //이어서 그 수만큼 한 줄에 한 쌍씩 네트워크 상에서 직접 연결되어 있는 컴퓨터의 번호 쌍이 주어진다.
 //
 //1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 첫째 줄에 출력한다.
-
 #include <iostream>
 #include <vector>
 using namespace std;
 
 vector<vector<int> > v;
+bool visited[101];
 int vir;
 
 void virus(int x) {
-    vir++;
+    if(visited[x]) return;
+    visited[x] = 1; 
     for (int i = 0; i < v[vir].size(); i++) {
+        vir++;
         virus(v[vir][i]);
     }
 }
@@ -34,7 +36,6 @@ int main()
 
     cout << vir;
 }
-
 /*
 신종 바이러스인 웜 바이러스는 네트워크를 통해 전파된다. 한 컴퓨터가 웜 바이러스에 걸리면 그 컴퓨터와 네트워크 상에서 연결되어 있는 모든 컴퓨터는 웜 바이러스에 걸리게 된다.
 
