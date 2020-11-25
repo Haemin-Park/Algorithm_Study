@@ -7,13 +7,13 @@
 using namespace std;
 #define MAX 25
 
-int arr[MAX][MAX];
-int check[MAX][MAX];
-vector <int> count;
+int map[MAX][MAX]; 
+int check[MAX][MAX]; 
+vector <int> count; //단지 속하는 집 수
 
 void complex(int x, int y) {
 	check[x][y] = 1;
-	if (arr[x][y] == 1) {
+	if (map[x][y] == 1) {
 		complex(x + 1, y);
 		complex(x, y + 1);
 	}
