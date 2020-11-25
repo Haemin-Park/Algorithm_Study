@@ -32,7 +32,7 @@ int main()
 	for (int i = 0; i < num; i++)
 		for (int j = 0; j < num; j++)
 			{
-			complex(i, j,count_index);
+			complex(i, j,k++);
 			}
 }
 
