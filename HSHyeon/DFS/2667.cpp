@@ -7,11 +7,12 @@
 using namespace std;
 #define MAX 25
 
-int map[MAX][MAX]; 
+int map[MAX][MAX]; //지도
 int check[MAX][MAX]; 
 vector <int> count; //단지 속하는 집 수
 
 void complex(int x, int y) {
+	if(check[x][y]==1)return;
 	check[x][y] = 1;
 	if (map[x][y] == 1) {
 		complex(x + 1, y);
@@ -29,9 +30,9 @@ int main()
 
 	for (int i = 0; i < num; i++)
 		for (int j = 0; j < num; j++)
-			if (check[i][j == 0]) {
-				complex(i, j);
-				count[];
+			{
+			complex(i, j);
+			//count[];
 			}
 }
 
