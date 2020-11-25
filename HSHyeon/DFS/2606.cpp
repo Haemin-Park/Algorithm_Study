@@ -30,7 +30,7 @@ int main()
         cin >> x >> y;
         v[x].push_back(y);
     }
-    virus(x);
+    virus(1);
 
     cout << vir;
 }
