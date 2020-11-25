@@ -11,9 +11,10 @@ int map[MAX][MAX]; //지도
 int check[MAX][MAX]; 
 vector <int> count; //단지 속하는 집 수
 
-void complex(int x, int y) {
+void complex(int x, int y,int index) {
 	if(check[x][y]==1)return;
 	check[x][y] = 1;
+	count[index]++;
 	if (map[x][y] == 1) {
 		complex(x + 1, y);
 		complex(x, y + 1);
@@ -27,12 +28,11 @@ int main()
 	for (int i = 0; i < num; i++)
 		for (int j = 0; j < num; j++)
 			cin >> arr[i][j];
-
+	int k=0;
 	for (int i = 0; i < num; i++)
 		for (int j = 0; j < num; j++)
 			{
-			complex(i, j);
-			//count[];
+			complex(i, j,count_index);
 			}
 }
 
