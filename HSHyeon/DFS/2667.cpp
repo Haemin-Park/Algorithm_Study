@@ -2,39 +2,47 @@
 //
 //첫 번째 줄에는 총 단지수를 출력하시오. 그리고 각 단지내 집의 수를 오름차순으로 정렬하여 한 줄에 하나씩 출력하시오.
 
+
 #include <iostream>
 #include <vector>
 using namespace std;
 #define MAX 25
 
 int map[MAX][MAX]; //지도
-int check[MAX][MAX]; 
-vector <int> count; //단지 속하는 집 수
+int check[MAX][MAX];
+vector <int> house; //단지 속하는 집 수
 
-void complex(int x, int y,int index) {
-	if(check[x][y]==1)return;
+void complex(int x, int y, int index) {
+	if (check[x][y] == 1)return;
 	check[x][y] = 1;
-	count[index]++;
+	house[index]++;
 	if (map[x][y] == 1) {
-		complex(x + 1, y);
-		complex(x, y + 1);
+		complex(x + 1, y,index);
+		complex(x, y + 1,index);
 	}
 }
 
 int main()
 {
-	int num, ;
+	int num;
 	cin >> num;
+	for (int i = 0; i < num; i++) 
+	for(int j=0;j<num;j++){
+		scanf_s("%1d", &map[i][j]);
+	}
+
+	int k = 0;
+
 	for (int i = 0; i < num; i++)
 		for (int j = 0; j < num; j++)
-			cin >> arr[i][j];
-	int k=0;
-	for (int i = 0; i < num; i++)
-		for (int j = 0; j < num; j++)
-			{
-			complex(i, j,k++);
-			}
+		{if()
+			complex(i, j, k);
+			k++;
+		}
+	cout << house[0];
 }
+
+
 
 /*
 <그림 1>과 같이 정사각형 모양의 지도가 있다. 
