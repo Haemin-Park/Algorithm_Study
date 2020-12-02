@@ -29,7 +29,7 @@ using namespace std;
 #pragma warning(disable:4996)
 
 // 지도의 크기
-int N;
+int N; 
 
 int map[25][25];
 vector<int> myGraph[625];
