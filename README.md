@@ -13,4 +13,4 @@
 * **참여자** [`Haemin-Park`](https://github.com/Haemin-Park/Algorithm_Study/tree/algo_Haemin-Park), [`KimRiun`](https://github.com/Haemin-Park/Algorithm_Study/tree/algo_KimRiun), [`LeeJE20`](https://github.com/Haemin-Park/Algorithm_Study/tree/algo_LeeJE20), [`YEJIN-LILY`](https://github.com/Haemin-Park/Algorithm_Study/tree/algo_YEJIN-LILY), [`HSHyeon`](https://github.com/Haemin-Park/Algorithm_Study/tree/algo_hongsh)
 
 * **풀리퀘스트 설명** 
-[설명보기(클릭)](https://www.notion.so/6c17abb2d476470387f4064a5214f11d)
+[`설명보기`](https://www.notion.so/6c17abb2d476470387f4064a5214f11d)
